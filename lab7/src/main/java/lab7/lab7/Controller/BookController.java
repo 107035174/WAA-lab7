@@ -63,7 +63,7 @@ public class BookController {
             bookRepository.deleteById(id);
             return new ResponseEntity<String>("Book deleted successfully", HttpStatus.OK);
         } else {
-            return new ResponseEntity<String>("Book not found", HttpStatus.OK);
+            return new ResponseEntity<String>("Book not found", HttpStatus.NOT_FOUND);
         }
 
     }
